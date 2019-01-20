@@ -45,7 +45,10 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    ['@nuxtjs/google-analytics', {
+       id: 'UA-56965162-1'
+     }]
   ],
   /*
   ** Axios module configuration
