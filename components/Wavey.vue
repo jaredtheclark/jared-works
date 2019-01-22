@@ -50,29 +50,32 @@
         const tlEndScroll = new this.$gsap.TimelineMax( {delay:0 });
 
 
-
-        tl.defaultEase = Linear.easeNone;
-        var speed = 5;
+        var easing =  Linear.easeInOut;
+        var speed = 3;
 
         tl.to('#wavey-boi path', speed, {
           attr:{
             d:paths[0]
-          }
+          },
+          ease: easing
         })
           .to('#wavey-boi path', speed, {
             attr: {
               d:paths[1]
-            }
+            },
+            ease: easing
           })
           .to('#wavey-boi path', speed, {
             attr: {
               d:paths[2]
-            }
+            },
+            ease: easing
           })
           .to('#wavey-boi path', speed, {
             attr: {
               d:paths[3]
-            }
+            },
+            ease: easing
           })
 
         //'close' the blob
