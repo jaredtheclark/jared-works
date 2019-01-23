@@ -4,7 +4,7 @@
       <p>
         <span>Jared Clark</span>
         <span>digital creator</span>
-        <a href="mailto:jaredtheclark@gmail.com">Contact Me</a>
+        <a href="mailto:jared@jared.works">Contact Me</a>
       </p>
     </nav>
 </template>
