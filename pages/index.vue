@@ -49,6 +49,7 @@ Lauren James is a women’s retailer that sells preppy dresses and printed tees.
         <p>
           Water Levels started as a small front-end project for a friend grew into an obsession with water levels. waterlevels.us is a website powered by Vue that informs users of water levels in real time with the USGS API.
         </p>
+        <a target="_blank" href="waterlevels.us"
       </div>
       <img src="~assets/images/projects/images-waterlevels-mockup@2x.png" />
     </section>
