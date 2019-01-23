@@ -17,7 +17,10 @@
         <h1>Lauren James</h1>
         <div class="divider"></div>
         <p>
-          Lauren James is a women’s retailer that sells preppy dresses and printed tees. I joined the Lauren James team in 2017 as UX Lead and have since been promoted to Director of Digital Strategy &amp; Marketing.</p>
+
+Lauren James is a women’s retailer that sells preppy dresses and printed tees. I joined the Lauren James team in 2017 as UX Lead and now work as the Director of Digital Strategy &amp; Marketing.
+         </p>
+
       </div>
       <div class="floating-images">
         <img src="~assets/images/projects/floating-6.jpg" />
