@@ -36,7 +36,7 @@ Lauren James is a women’s retailer that sells preppy dresses and printed tees.
         <h1>Scribel</h1>
         <div class="divider"></div>
         <p>
-          Scribel is an app a few friends and I worked on that helps courtoom Interpreters by setting up a peer-to-peer connection between two WebRTC capable devices.
+          Scribel is an app a few friends and I worked on that helps courtroom Interpreters by setting up a peer-to-peer connection between two WebRTC capable devices.
         </p>
       </div>
       <img src="~assets/images/projects/images-scrible-mockup@2x.png" />
