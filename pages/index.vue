@@ -17,10 +17,8 @@
         <h1>Lauren James</h1>
         <div class="divider"></div>
         <p>
-
-Lauren James is a women’s retailer that sells preppy dresses and printed tees. I joined the Lauren James team in 2017 as UX Lead and now work as the Director of Digital Strategy &amp; Marketing.
+Lauren James is an online retailer that sells high fashion women's apparel. I joined the Lauren James team in 2017 as UX Lead and now work as the Director of Digital Strategy &amp; Marketing.
          </p>
-
       </div>
       <div class="floating-images">
         <img src="~assets/images/projects/floating-6.jpg" />
@@ -49,7 +47,7 @@ Lauren James is a women’s retailer that sells preppy dresses and printed tees.
         <p>
           Water Levels started as a small front-end project for a friend grew into an obsession with water levels. waterlevels.us is a website powered by Vue that informs users of water levels in real time with the USGS API.
         </p>
-        <a target="_blank" href="waterlevels.us"
+
       </div>
       <img src="~assets/images/projects/images-waterlevels-mockup@2x.png" />
     </section>
@@ -229,6 +227,11 @@ export default {
             font-weight: normal;
             line-height: 1.25rem;
             color:#616678;
+            @media screen and (min-width:1140px) {
+              & {
+                font-size:1rem;
+              }
+            }
           }
 
       }
