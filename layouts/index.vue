@@ -1,6 +1,8 @@
 <template>
 <div>
   <div class="main">
+    <Wavey />
+    <newbar />
     <nuxt />
   </div>
   <AppFooter />
@@ -15,10 +17,15 @@
 
 import AppFooter from '~/components/AppFooter.vue'
 
+import newbar from '~/components/newbar.vue'
+import Wavey from '~/components/Wavey.vue'
+
 
 export default {
   components: {
-    AppFooter
+    AppFooter,
+    newbar,
+    Wavey
   },
 
   data() {

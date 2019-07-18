@@ -1,7 +1,15 @@
 const pkg = require('./package')
 
+const baseUrl= process.env.BASE_URL || 'http://localhost:3000';
+
 module.exports = {
   mode: 'universal',
+
+
+
+
+    devtools: true,
+
 
   /*
   ** Headers of the page
@@ -13,26 +21,27 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
       { name: 'google-site-verification', content: '_WkKKAHMW01uVgzipZpkprVt56czMzidpY4XOuel1qo'},
-      {
-         hid: `og:title`,
-         property: 'og:title',
-         content: 'Jared Works | Digital Creator'
-       },
-      {
+
+        {
+          hid: `og:title`,
+          property: 'og:title',
+          content: 'Jared Works | Digital Creator'
+        },
+        {
           hid: `og:image`,
           property: 'og:image',
-          content: '@/assets/images/open-graph.png'
-      },
-      {
+          content: baseUrl + '/open-graph.png'
+        },
+        {
           hid: `og:type`,
           property: 'og:type',
           content: 'website'
-      },
-      {
+        },
+        {
           hid: `og:description`,
           property: 'og:description',
-          content: pkg.description
-      }
+          content: 'A website supporting Jared Works'
+        }
 
 
     ],
