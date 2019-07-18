@@ -1,6 +1,6 @@
-# jared-works-fix
+# Jared Works
 
-> My fine Nuxt.js project
+> A nuxt.js supported website for jared.works, also acts as a sandbox at ./sandbox
 
 ## Build Setup
 

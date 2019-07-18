@@ -60,7 +60,9 @@ import floating2 from '~/assets/images/projects/floating-2.svg';
 import floating3 from '~/assets/images/projects/floating-3.svg';
 import floating4 from '~/assets/images/projects/floating-4.svg';
 
+
 export default {
+  layout: 'index',
   components: {
     floating1,
     floating2,

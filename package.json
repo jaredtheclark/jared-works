@@ -5,13 +5,12 @@
   "author": "Jared",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "heroku-postbuild": "npm run build"
+    "precommit": "npm run lint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
