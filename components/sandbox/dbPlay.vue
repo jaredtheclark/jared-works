@@ -1,17 +1,14 @@
 <template>
   <section class="container">
-    <dbPlay />
+    hello from 'dbPlay' component!
     <nuxt/>
   </section>
 </template>
 
 <script>
-import dbPlay from '~/components/sandbox/dbPlay.vue'
 
 export default {
-  components: {
-    dbPlay
-  }
+
 }
 </script>
 
