@@ -1,0 +1,6 @@
+query get_users {
+  users {
+    username
+    id
+  }
+}

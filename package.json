@@ -13,10 +13,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc10",
     "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/google-analytics": "^2.0.2",
+    "@vue/cli-shared-utils": "^3.10.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
+    "graphql": "^14.4.2",
     "ks-vue-scrollmagic": "^1.0.2",
     "nuxt": "^2.0.0",
     "vue-animejs": "^2.0.0"
@@ -25,7 +29,7 @@
     "babel-eslint": "^8.2.6",
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.2",
-    "eslint": "^5.0.1",
+    "eslint": "^5.16.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.11.0",

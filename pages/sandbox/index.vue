@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <dbPlay />
-    <nuxt/>
+    <nuxt />
   </section>
 </template>
 
