@@ -3,17 +3,17 @@ const pkg = require('./package')
 const baseUrl= process.env.BASE_URL || 'http://localhost:3000';
 
 module.exports = {
-  mode: 'universal',
 
+  mode: 'universal',
 
   dotenv: {
       /* module options */
       hasura_secret: process.env.X_HASURA_ADMIN_SECRET
     },
 
-    devtools: true,
+  devtools: true,
 
-
+  serverMiddleware: ['~/api/index'],
   /*
   ** Headers of the page
   */
@@ -80,6 +80,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
     ['@nuxtjs/google-analytics', {
@@ -92,6 +93,20 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+          logout: { url: '/api/auth/logout', method: 'post' },
+          user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
+        },
+        // tokenRequired: true,
+        // tokenType: 'bearer'
+      }
+    }
   },
 
   // Give apollo module options

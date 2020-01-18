@@ -1,20 +1,15 @@
 <template>
-
-
   <div>
-     <ul>
-       <li>
-         <router-link to="/apollo-test/">Index</router-link>
-       </li>
-       <li>
-         <router-link to="/apollo-test/page-a">Page A - only logged in user</router-link>
-       </li>
-       <li>
-         <router-link to="/apollo-test/page-b">Page B</router-link>
-       </li>
-     </ul>
 
+     <div v-if="$auth.loggedIn">
+       {{ $auth.user.email }}
+       <v-btn text>Logout</v-btn>
+     </div>
 
+     <div v-else>
+       <router-link text to="/login">Login</router-link>
+       <router-link text to="/register">Register</router-link>
+     </div>
 
 
   <div class="main">
