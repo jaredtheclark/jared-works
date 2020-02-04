@@ -1,14 +1,10 @@
 import { Router } from 'express'
 import passport from 'passport'
+import consola from 'consola'
 
 import User from '../models/user'
 
 const router = Router()
-
-router.get('/', (req, res) =>  {
-  res.json({message: "This holds other routes for authenticating."})
-})
-
 
 router.post('/register', (req, res) => {
   const { email, password } = req.body
@@ -24,6 +20,7 @@ router.post('/register', (req, res) => {
       if (err) return res.sendStatus(500)
       user.password = undefined
       res.json(user)
+      consola.log(user)
     })
   })
 })

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-     <div v-if="$auth.loggedIn">
+     <!-- <div v-if="$auth.loggedIn">
        {{ $auth.user.email }}
        <v-btn text>Logout</v-btn>
      </div>
@@ -9,7 +9,7 @@
      <div v-else>
        <router-link text to="/login">Login</router-link>
        <router-link text to="/register">Register</router-link>
-     </div>
+     </div> -->
 
 
   <div class="main">
