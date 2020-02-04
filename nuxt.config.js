@@ -3,14 +3,17 @@ const pkg = require('./package')
 const baseUrl= process.env.BASE_URL || 'http://localhost:3000';
 
 module.exports = {
+
   mode: 'universal',
 
+  dotenv: {
+      /* module options */
+      hasura_secret: process.env.X_HASURA_ADMIN_SECRET
+    },
 
+  devtools: true,
 
-
-    devtools: true,
-
-
+  serverMiddleware: ['~/api/index'],
   /*
   ** Headers of the page
   */
@@ -77,10 +80,13 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    'nuxt-svg-loader',
+    '@nuxtjs/auth',
+    '@nuxtjs/apollo',
+    '@nuxtjs/dotenv',
     ['@nuxtjs/google-analytics', {
-       id: 'UA-56965162-1'
-     }]
+      id: 'UA-56965162-1'
+    }],
+    'nuxt-svg-loader',
   ],
   /*
   ** Axios module configuration
@@ -89,6 +95,73 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+          logout: { url: '/api/auth/logout', method: 'post' },
+          user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
+        },
+        // tokenRequired: true,
+        // tokenType: 'bearer'
+      }
+    }
+  },
+
+  // Give apollo module options
+  apollo: {
+    tokenName: 'yourApolloTokenName', // optional, default: apollo-token
+    cookieAttributes: {
+      /**
+        * Define when the cookie will be removed. Value can be a Number
+        * which will be interpreted as days from time of creation or a
+        * Date instance. If omitted, the cookie becomes a session cookie.
+        */
+      expires: 7, // optional, default: 7 (days)
+
+      /**
+        * Define the path where the cookie is available. Defaults to '/'
+        */
+      path: '/', // optional
+      /**
+        * Define the domain where the cookie is available. Defaults to
+        * the domain of the page where the cookie was created.
+        */
+      domain: 'example.com', // optional
+
+      /**
+        * A Boolean indicating if the cookie transmission requires a
+        * secure protocol (https). Defaults to false.
+        */
+      secure: false,
+    },
+    includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+    authenticationType: 'Basic', // optional, default: 'Bearer'
+    // (Optional) Default 'apollo' definition
+    defaultOptions: {
+      // See 'apollo' definition
+      // For example: default query options
+      $query: {
+        loadingKey: 'loading',
+        fetchPolicy: 'cache-and-network',
+      },
+    },
+    // optional
+    errorHandler: '~/plugins/apollo-error-handler.js',
+    // required
+    clientConfigs: {
+      default: '~/apollo/clientConfig.js',
+
+      // test: {
+      //   httpEndpoint: 'http://localhost:5000',
+      //   wsEndpoint: 'ws://localhost:5000',
+      //   tokenName: 'apollo-token'
+      // },
+      // alternative: user path to config which returns exact same config options
+      test2: '~/plugins/my-alternative-apollo-config.js'
+    }
+  },
   /*
   ** Build configuration
   */
@@ -106,6 +179,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+
+
 
     }
 

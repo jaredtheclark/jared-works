@@ -61,8 +61,15 @@ img {
   @media screen and (max-width: 390px){
     grid-template-columns: 1rem 1fr 1rem;
   }
-  
+
   > * {
     grid-column: 2 / 3;
   }
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
 }
