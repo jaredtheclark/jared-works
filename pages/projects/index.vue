@@ -1,5 +1,7 @@
 <template>
   <section class="container">
+    <navbar/>
+    <floating3/>
     <nuxt/>
   </section>
 </template>

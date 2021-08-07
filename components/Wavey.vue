@@ -13,7 +13,7 @@
 <script>
   export default {
     components:{
-    name:"Wavey"
+    // name:"Wavey"
   },
     created () {
         if (process.browser) {

@@ -66,7 +66,6 @@ export default {
   components: {
     floating1,
     floating2,
-    floating3,
     floating4
   },
 
