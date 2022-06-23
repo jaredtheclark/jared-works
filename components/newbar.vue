@@ -2,9 +2,9 @@
     <nav class="topbar">
       <arrow/>
       <p>
-        <span>Jared Clark</span>
-        <span>digital creator</span>
-        <a href="mailto:jared@jared.works">Contact Me</a>
+        <span>J. Works</span>
+        <span>digital creation</span>
+        <a href="mailto:jared@jared.works">Contact Us</a>
       </p>
     </nav>
 </template>
