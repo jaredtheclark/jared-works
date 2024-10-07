@@ -1,5 +1,11 @@
 <template>
-  <div class="container">
+  <div>
+    <NuxtRouteAnnouncer />
+    <div>
+  <div class="main">
+    <Wavey />
+    <newbar />
+    <div class="container">
     <div id="big-circle">
       <svg height="1249" viewBox="0 0 1249 1249" width="1249" xmlns="http://www.w3.org/2000/svg"><path d="m624.5 1034.35937c226.359082 0 409.85937-183.500288 409.85937-409.85937s-183.500288-409.859375-409.85937-409.859375-409.859375 183.500293-409.859375 409.859375 183.500293 409.85937 409.859375 409.85937zm0 214.64063c-344.901826 0-624.5-279.598174-624.5-624.5s279.598174-624.5 624.5-624.5 624.5 279.598174 624.5 624.5-279.598174 624.5-624.5 624.5z" fill="#f6f9ff"/></svg>
     </div>
@@ -52,65 +58,15 @@ Lauren James is an online retailer that sells high fashion women's apparel. I jo
       <img src="~assets/images/projects/images-waterlevels-mockup@2x.png" />
     </section>
   </div>
+  </div>
+  <AppFooter />
+</div>
+  </div>
 </template>
 
-<script>
-import floating1 from '~/assets/images/projects/floating-1.svg';
-import floating2 from '~/assets/images/projects/floating-2.svg';
-import floating3 from '~/assets/images/projects/floating-3.svg';
-import floating4 from '~/assets/images/projects/floating-4.svg';
 
+<style lang="scss">
 
-export default {
-  layout: 'index',
-  components: {
-    floating1,
-    floating2,
-    floating4
-  },
-
-  mounted () {
-    // this.$nextTick(this.dividerAnimate),
-    this.$nextTick(this.circleParallax);
-  },
-  methods:{
-    dividerAnimate () {
-      const divtl = new this.$gsap.TimelineMax( { repeat:-1, yoyo:true, delay:0 });
-      divtl.to('.divider', 50, {
-        width: {function(){
-          min = (2);
-          max = (4);
-          var result = Math.floor(Math.random() * (max - min)) + min + "rem";
-          console.log(result)
-          return result; //The maximum is exclusive and the minimum is inclusive
-        }}
-      })
-    },
-    circleParallax (){
-
-      //create new gsap instance and add a tween
-      const circle_timeline = new this.$gsap.TimelineMax({ease: Power2.easeInOut});
-      var circle_tween = circle_timeline.to('#big-circle', .5, {top:"-5%"})
-
-      // create scene and set its params
-      const scene = new this.$scrollmagic.Scene({
-        offset: '100vh',
-        triggerElement:'.container',
-        triggerHook:'onLeave',
-        duration: 4000,
-        loglevel: 2
-      })
-      .setTween(circle_tween)
-
-    //Add scene to ScrollMagic controller by emiting an 'addScene' event on vm.$ksvuescr (which is our global event bus)
-    this.$ksvuescr.$emit('addScene', 'circleParallax', scene)
-    }
-  },
-
-}
-</script>
-
-<style lang="scss" scoped>
 .container{
   padding-bottom:8rem;
 }
@@ -427,4 +383,103 @@ export default {
       max-width: 40vw;
     }
   }
+
+
+
+.main {
+  min-height: 100vh;
+}
 </style>
+<script>
+
+import AppFooter from '~/components/AppFooter.vue'
+
+import newbar from '~/components/newbar.vue'
+import Wavey from '~/components/Wavey.vue'
+
+import floating1 from '~/assets/images/projects/floating-1.svg?component';
+import floating2 from '~/assets/images/projects/floating-2.svg?component';
+import floating3 from '~/assets/images/projects/floating-3.svg?component';
+import floating4 from '~/assets/images/projects/floating-4.svg?component';
+
+
+export default {
+  components: {
+    AppFooter,
+    newbar,
+    Wavey,
+
+    floating1,
+    floating2,
+    floating4
+  },
+
+  data() {
+    return {
+
+    }
+  },
+  head() {
+    return {
+      meta: [
+      ]
+    }
+  },
+  created: function() {
+
+  },
+
+
+
+
+
+    // const { $gsap, $ScrollTrigger } = useNuxtApp()
+
+
+  
+
+  mounted () {
+    // this.$nextTick(this.dividerAnimate),
+    this.$nextTick(this.circleParallax);
+  },
+  methods:{
+    // dividerAnimate () {
+    //   const divtl = new this.$gsap.TimelineMax( { repeat:-1, yoyo:true, delay:0 });
+    //   divtl.to('.divider', 50, {
+    //     width: {function(){
+    //       min = (2);
+    //       max = (4);
+    //       var result = Math.floor(Math.random() * (max - min)) + min + "rem";
+    //       console.log(result)
+    //       return result; //The maximum is exclusive and the minimum is inclusive
+    //     }}
+    //   })
+    // },
+    // circleParallax (){
+
+    //   //create new gsap instance and add a tween
+    //   const circle_timeline = new this.$gsap.TimelineMax({ease: Power2.easeInOut});
+    //   var circle_tween = circle_timeline.to('#big-circle', .5, {top:"-5%"})
+
+    //   // create scene and set its params
+    //   const scene = new this.$scrollmagic.Scene({
+    //     offset: '100vh',
+    //     triggerElement:'.container',
+    //     triggerHook:'onLeave',
+    //     duration: 4000,
+    //     loglevel: 2
+    //   })
+    //   .setTween(circle_tween)
+
+    // //Add scene to ScrollMagic controller by emiting an 'addScene' event on vm.$ksvuescr (which is our global event bus)
+    // this.$ksvuescr.$emit('addScene', 'circleParallax', scene)
+    // }
+  },
+
+}
+
+
+
+
+
+</script>
