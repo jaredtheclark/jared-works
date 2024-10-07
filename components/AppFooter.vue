@@ -5,7 +5,7 @@
         <span>Jared Clark</span>
         <span>digital creator</span>
         <a href="mailto:jared@jared.works">Contact Me</a>
-        <ShortArrow/>
+        <ShortArrow filled />
       </p>
 
     </div>
@@ -75,7 +75,7 @@
 </style>
 
 <script>
-  import ShortArrow from '~/assets/images/ui/cool-arrow-short.svg'
+  import ShortArrow from '~/assets/images/ui/cool-arrow-short.svg?componentext'
 
   export default {
     components: {

@@ -1,52 +1,25 @@
 {
-  "name": "Jared-Works",
-  "version": "1.0.0",
-  "description": "A nuxt.js site supporting Jared Works",
-  "author": "Jared",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.1-rc.5",
-    "@nuxtjs/auth": "^4.8.5",
-    "@nuxtjs/axios": "^5.9.2",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/google-analytics": "^2.2.2",
-    "@vue/cli-shared-utils": "^4.5.13",
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "core-js": "^3.16.0",
-    "cross-env": "^7.0.3",
-    "express": "^4.16.3",
-    "express-session": "^1.17.0",
-    "graphql": "^15.5.1",
-    "ks-vue-scrollmagic": "^1.0.2",
-    "mongoose": "^5.8.7",
-    "node-sass": "4.14.1",
-    "nuxt": "^2.11.0",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "vue-animejs": "^2.0.0"
+    "@nuxt/eslint": "^0.5.7",
+    "dotenv": "^16.4.5",
+    "nuxi": "^3.14.0",
+    "nuxt": "^3.13.0",
+    "nuxt-svgo": "^4.0.6"
   },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "coffee-loader": "^3.0.0",
-    "coffeescript": "^2.5.0",
-    "eslint": "^7.32.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-vue": "^7.15.1",
-    "nodemon": "^2.0.12",
-    "nuxt-svg-loader": "^1.2.0",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "10.1.1",
-    "vue-svg-loader": "^0.16.0"
+    "@nuxt/icon": "^1.5.4",
+    "sass": "^1.79.4",
+    "typescript": "^5.6.2"
   }
 }

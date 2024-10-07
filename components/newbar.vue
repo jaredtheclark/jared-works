@@ -1,6 +1,6 @@
 <template>
     <nav class="topbar">
-      <arrow/>
+      <arrow filled/>
       <p>
         <span>J. Works</span>
         <span>digital creation</span>
@@ -39,7 +39,7 @@
 </style>
 
 <script>
-  import arrow from '~/assets/images/ui/cool-arrow-short.svg'
+  import arrow from '~/assets/images/ui/cool-arrow-short.svg?componentext'
 
   export default {
     components:{
