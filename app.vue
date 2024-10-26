@@ -14,7 +14,7 @@
         <h1>
         digital strategy, front end design &amp; dev
         </h1>
-        <a href="/resume.pdf" download="Jared_Clark_Resume">resumé download</a>
+        <!-- <a href="/resume.pdf" download="Jared_Clark_Resume">resumé download</a> -->
       </div>
     </section>
     <section id="lauren-james">
